@@ -256,7 +256,68 @@
       .footer-cta { padding: 48px 24px; }
       .footer-cta h2 { font-size: 24px; }
     }
-  </style>
+  
+/* ── CSM-STYLE CANDIDATE CARDS (Sagan editorial) ── */
+.candidates { display: flex; flex-direction: column; gap: 32px; }
+.candidate { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(10,14,15,.05), 0 6px 20px rgba(10,14,15,.05); transition: box-shadow .2s ease; }
+.candidate:hover { box-shadow: var(--shadow-md); }
+.candidate-head { padding: 28px 32px 22px; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, var(--bg-light), var(--bg-card)); }
+.candidate-badge { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; border-radius: 999px; background: rgba(9,58,62,.06); font-family: var(--font-meta); font-size: 12px; font-weight: 600; letter-spacing: .5px; color: var(--dark); margin-bottom: 14px; }
+.candidate-badge .flag { font-size: 15px; }
+.candidate-name-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin-bottom: 6px; flex-wrap: wrap; }
+.candidate-name { font-family: var(--font-heading); font-weight: 600; font-size: 32px; letter-spacing: -.015em; color: var(--dark); }
+.candidate-rate { display: flex; align-items: baseline; gap: 4px; }
+.candidate-rate .rate-num { font-family: var(--font-heading); font-weight: 600; font-size: 26px; color: var(--primary); }
+.candidate-rate .rate-suffix { font-family: var(--font-body); font-size: 13px; color: var(--text-light); font-weight: 500; }
+.candidate-title { font-family: var(--font-meta); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); font-weight: 600; margin-bottom: 14px; }
+.candidate-headline { font-family: var(--font-heading); font-size: 20px; color: var(--dark); font-weight: 400; line-height: 1.4; }
+.candidate-headline em { font-style: italic; }
+.candidate-body { padding: 28px 32px 32px; }
+.candidate-section { margin-bottom: 24px; }
+.candidate-body .section-label, .candidate-section .section-label { font-family: var(--font-meta); font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--primary); font-weight: 600; margin-bottom: 10px; }
+.candidate-summary { font-size: 15.5px; line-height: 1.65; color: var(--text-mid); }
+.strengths { list-style: none; padding-left: 0; margin: 0; }
+.strengths li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.55; color: var(--text-primary); margin-bottom: 10px; }
+.strengths li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--primary); }
+.candidate-diff { margin: 24px 0 0; padding: 18px 22px; background: rgba(9,58,62,.05); border-left: 3px solid var(--dark); border-radius: 0 8px 8px 0; }
+.candidate-diff .diff-label { font-family: var(--font-meta); font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--dark); font-weight: 600; margin-bottom: 8px; }
+.candidate-diff p { font-size: 15px; line-height: 1.6; color: var(--dark); font-weight: 500; }
+.candidate-actions { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--border); display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 8px; font-family: var(--font-meta); font-size: 12px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; cursor: pointer; text-decoration: none; border: 1px solid transparent; transition: all .18s ease; }
+.btn-primary { background: var(--dark); color: #fff; border-color: var(--dark); }
+.btn-primary:hover { background: var(--primary-deeper); border-color: var(--primary-deeper); }
+.btn-outline { background: transparent; color: var(--dark); border-color: var(--border-strong); }
+.btn-outline:hover { background: var(--bg-light); }
+.cv-toggle .cv-chev { transition: transform .2s ease; }
+.cv-toggle[aria-expanded="true"] .cv-chev { transform: rotate(180deg); }
+.cv-panel { margin-top: 26px; background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; animation: cvIn .28s ease; }
+.cv-panel[hidden] { display: none; }
+@keyframes cvIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.cv-header { margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+.cv-tag { font-family: var(--font-meta); font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--primary); font-weight: 600; margin-bottom: 6px; }
+.cv-header h4 { font-family: var(--font-heading); font-weight: 600; font-size: 24px; color: var(--dark); letter-spacing: -.01em; }
+.cv-section { margin-bottom: 22px; }
+.cv-section-label { font-family: var(--font-meta); font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--dark); font-weight: 700; margin-bottom: 12px; }
+.cv-section p { font-size: 14.5px; line-height: 1.65; color: var(--text-mid); }
+.cv-edu { margin-bottom: 12px; padding-left: 14px; border-left: 2px solid var(--border); }
+.cv-edu-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; flex-wrap: wrap; }
+.cv-edu-degree { font-family: var(--font-heading); font-weight: 600; font-size: 15px; color: var(--dark); }
+.cv-edu-date { font-family: var(--font-meta); font-size: 11px; color: var(--text-light); }
+.cv-edu-school { font-size: 13.5px; color: var(--text-mid); }
+.cv-role { margin-bottom: 16px; padding-left: 14px; border-left: 2px solid var(--border); }
+.cv-role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; flex-wrap: wrap; }
+.cv-role-title { font-family: var(--font-heading); font-weight: 600; font-size: 15px; color: var(--dark); }
+.cv-role-dates { font-family: var(--font-meta); font-size: 11px; color: var(--text-light); }
+.cv-role-industry { font-size: 13px; color: var(--text-light); font-style: italic; margin-bottom: 6px; }
+.cv-role-desc { font-size: 14px; line-height: 1.6; color: var(--text-mid); }
+.cv-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.cv-tool { display: inline-flex; padding: 4px 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 999px; font-family: var(--font-meta); font-size: 11px; color: var(--text-mid); font-weight: 500; }
+@media (max-width: 900px) {
+  .candidate-name { font-size: 26px; }
+  .candidate-head, .candidate-body { padding-left: 22px; padding-right: 22px; }
+  .cv-panel { padding: 22px; }
+}
+</style>
 </head>
 <body>
 
@@ -312,95 +373,241 @@
 
     <div id="batch-1" class="batch-panel">
       <div class="candidates">
-        
-    <div class="candidate-card">
-      <div class="card featured" id="candidate-0">
-        <div class="card-top">
-          <div class="card-identity">
-            <div class="card-avatar featured-avatar">AK</div>
-            <div>
-              <div class="card-name">Ashley</div>
-              <div class="card-location">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Kenya &middot; 
-              </div>
-              <div class="card-badges">
-                
-                <span class="badge badge-shortlisted">Pre-Shortlisted</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-rate">
-            <div class="card-rate-amount">$2,499/mo</div>
-            <div class="card-rate-period">USD / Month</div>
-          </div>
+<article class="candidate" id="candidate-0">
+  <header class="candidate-head">
+    <div class="candidate-badge">
+      <span class="flag">🇰🇪</span>
+      <span class="country">Kenya</span>
+    </div>
+    <div class="candidate-name-row">
+      <h3 class="candidate-name">Ashley</h3>
+      <div class="candidate-rate">
+        <span class="rate-num">$2,499</span>
+        <span class="rate-suffix">/mo</span>
+      </div>
+    </div>
+    <div class="candidate-title">Staff Accountant &middot; 6+ Years &middot; QBO + Multi-entity</div>
+    <div class="candidate-headline"><em>The QBO close mechanic who&apos;s already done a multi-entity implementation.</em></div>
+  </header>
+  <div class="candidate-body">
+    <div class="candidate-section">
+      <div class="section-label">Profile</div>
+      <p class="candidate-summary">6+ years across U.S., EU, and SME books. Currently runs end-to-end AR for a US e-commerce retailer across Amazon FBA/SFP and Walmart in QuickBooks Online. Previously led a QBO implementation for an EU multi-entity group. That&apos;s the closest match on this shortlist to the QBO-to-Acumatica migration Sunline is running.</p>
+    </div>
+    <div class="candidate-section">
+      <div class="section-label">What they bring</div>
+      <ul class="strengths">
+        <li>Full-cycle month-end close: reconciliations, accruals, financial statements</li>
+        <li>QBO implementation experience: Chart of Accounts design, data cleanup, migration readiness</li>
+        <li>AR ownership across marketplaces (Amazon FBA/SFP, Walmart) with settlement reconciliation</li>
+        <li>Payroll processing and multi-jurisdiction tax compliance</li>
+        <li>Power BI + Advanced Excel (Pivot Tables, XLOOKUP) for reporting</li>
+        <li>Trains junior accountants on QBO and Xero</li>
+      </ul>
+    </div>
+    <div class="candidate-diff">
+      <div class="diff-label">The difference</div>
+      <p>The only candidate on this shortlist who has actually led a QBO implementation for a multi-entity group. Direct read-across to Sunline&apos;s migration path.</p>
+    </div>
+    <div class="candidate-actions">
+      <button class="btn btn-primary cv-toggle" data-target="cv-0" aria-expanded="false">
+        <span class="cv-toggle-label">View CV</span>
+        <svg class="cv-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <a class="btn btn-outline" href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-cgZHzCc5WYus/e623f99c-f58f-4990-a80d-a40717b43d77-pBszHAaPU8QixLtq8KC7HwE70B6lU5HGACshom1ktVANbZgjDY9oT3eUyHUHAaMTzG7Y3uWoS2lXPYhSOtM7gPmjtXi2yg2mUpX/Resume_Ashley-Kerubo.pdf" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download resume
+      </a>
+      <a class="btn btn-outline" href="https://candidate-video.com/uploads/99066fdf-7392-41a9-af3a-ee5b3403dbc5" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Video intro
+      </a>
+    </div>
+    <div class="cv-panel" id="cv-0" hidden>
+      <div class="cv-header">
+        <div class="cv-tag">Anonymized CV &middot; Sagan</div>
+        <h4>Ashley &middot; Kenya</h4>
+      </div>
+      <section class="cv-section">
+        <div class="cv-section-label">Executive summary</div>
+        <p>Results-driven Accounting &amp; Finance Specialist with 6+ years of experience supporting U.S., EU, and global businesses across e-commerce, startups, and SMEs. Expertise in full-cycle accounting, accounts receivable, and month-end close, with a strong focus on reconciliations, financial reporting, and system optimization. Advanced in QuickBooks Online, Xero, SAP, Power BI, and Excel.</p>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Education</div>
+        <div class="cv-edu"><div class="cv-edu-top"><span class="cv-edu-degree">B.A. Economics and Finance</span></div><div class="cv-edu-school">Kenyatta University</div></div>
+        <div class="cv-edu"><div class="cv-edu-top"><span class="cv-edu-degree">Certified Public Accountant (CPA)</span></div><div class="cv-edu-school">Royal Business School</div></div>
+        <div class="cv-edu"><div class="cv-edu-top"><span class="cv-edu-degree">Certificate: QuickBooks, Networking, Programming</span></div><div class="cv-edu-school">NSPSI</div></div>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Work experience</div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Accounts Receivable Specialist</div><div class="cv-role-dates">Aug 2025 – Present</div></div><div class="cv-role-industry">Industry &middot; US E-commerce (Amazon, Walmart) &middot; Remote</div><p class="cv-role-desc">Owns end-to-end AR in QuickBooks Online across Amazon FBA/SFP and Walmart marketplaces. Reconciles settlements, revenue, and bank accounts. Runs AR aging analysis, month-end close support, accruals, and P&amp;L reporting.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Financial Accountant</div><div class="cv-role-dates">Nov 2024 – Dec 2025</div></div><div class="cv-role-industry">Industry &middot; U.S. Insurance Brokerage &middot; Remote</div><p class="cv-role-desc">Owned full-cycle accounting for a U.S. brokerage: AP/AR, payroll, financial statements, journal entries, cash flow tracking, and month-end close reconciliations.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Financial Accounting Specialist</div><div class="cv-role-dates">Jul 2024 – Sep 2024</div></div><div class="cv-role-industry">Industry &middot; M365 SIA (Latvia, EU multi-entity) &middot; Contract</div><p class="cv-role-desc">Led QuickBooks Online implementation for EU entities. Chart of Accounts design, migration of records from Excel into QBO, standardized reporting across entities. Delivered reconciliations, payroll support, and tax compliance.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Financial Accountant</div><div class="cv-role-dates">Aug 2022 – Jun 2024</div></div><div class="cv-role-industry">Industry &middot; Ariri &amp; Associates (Multi-client SME portfolio) &middot; Remote</div><p class="cv-role-desc">Managed accounting for multiple SME clients simultaneously: shared-services delivery model. Month-end close, reconciliations, and financial reporting across a portfolio. Trained junior accountants on QBO and Xero.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Finance &amp; Operations Lead</div><div class="cv-role-dates">May 2023 – Apr 2024</div></div><div class="cv-role-industry">Industry &middot; Cida Africa Investments &middot; On-site</div><p class="cv-role-desc">Led accounting operations: AP/AR, payroll, reconciliations, reporting. Developed budgets, forecasts, and cash flow plans. Ensured statutory compliance.</p></div>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Tools &amp; software</div>
+        <div class="cv-tools">
+          <span class="cv-tool">QuickBooks Online</span><span class="cv-tool">Xero</span><span class="cv-tool">SAP</span><span class="cv-tool">Power BI</span><span class="cv-tool">Advanced Excel</span><span class="cv-tool">Pivot Tables</span><span class="cv-tool">XLOOKUP</span>
         </div>
-
-        <div class="card-body">
-          
-
-          
-          <div class="card-section-title">Experience Highlights</div>
-          <div class="experience-list">
-            <div class="exp-item">
-              <div class="exp-dot-col">
-                <div class="exp-dot"></div>
-                <div class="exp-line"></div>
-              </div>
-              <div class="exp-content">
-                <div class="exp-role">Accounts Receivable Specialist &middot; Aug 2025 – Present</div>
-                <div class="exp-company">E-commerce Retail (US) &middot; Remote</div>
-                <div class="exp-highlight">Owns end-to-end AR in QuickBooks Online across Amazon FBA/SFP and Walmart marketplaces. Reconciles settlements, revenue, and bank accounts. Runs AR aging analysis, month-end close support, accruals, and P&amp;L reporting.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-dot-col">
-                <div class="exp-dot"></div>
-                <div class="exp-line"></div>
-              </div>
-              <div class="exp-content">
-                <div class="exp-role">Financial Accountant &middot; Nov 2024 – Dec 2025</div>
-                <div class="exp-company">US Insurance Brokerage &middot; Remote</div>
-                <div class="exp-highlight">Owned full-cycle accounting for a U.S. brokerage: AP/AR, payroll, financial statements, journal entries, cash flow tracking, and month-end close reconciliations.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-dot-col">
-                <div class="exp-dot"></div>
-                <div class="exp-line"></div>
-              </div>
-              <div class="exp-content">
-                <div class="exp-role">Financial Accounting Specialist &middot; Jul 2024 – Sep 2024</div>
-                <div class="exp-company">M365 SIA (Latvia, EU multi-entity) &middot; Contract</div>
-                <div class="exp-highlight">Led QuickBooks Online implementation for EU entities. Chart of Accounts design, migration of records from Excel into QBO, and standardized reporting across entities. The exact skill a QBO-to-Acumatica migration requires.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-dot-col">
-                <div class="exp-dot"></div>
-              </div>
-              <div class="exp-content">
-                <div class="exp-role">Financial Accountant &middot; Aug 2022 – Jun 2024</div>
-                <div class="exp-company">Ariri &amp; Associates (Multi-client SME portfolio) &middot; Remote</div>
-                <div class="exp-highlight">Managed accounting for multiple SME clients simultaneously: shared-services delivery model. Month-end close, reconciliations, and financial reporting across a portfolio. Trained junior accountants on QBO and Xero.</div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          
-
-          
-
-          <div class="card-actions">
-            <a class="video-intro-btn" href="https://candidate-video.com/uploads/99066fdf-7392-41a9-af3a-ee5b3403dbc5" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>Watch Intro Video</a>
-            
-            
-          </div>
+      </section>
+    </div>
+  </div>
+</article>
+<article class="candidate" id="candidate-1">
+  <header class="candidate-head">
+    <div class="candidate-badge">
+      <span class="flag">🇵🇰</span>
+      <span class="country">Pakistan</span>
+    </div>
+    <div class="candidate-name-row">
+      <h3 class="candidate-name">Eysha</h3>
+      <div class="candidate-rate">
+        <span class="rate-num">$2,499</span>
+        <span class="rate-suffix">/mo</span>
+      </div>
+    </div>
+    <div class="candidate-title">Staff Accountant &middot; 3.5 Years &middot; ACCA Candidate</div>
+    <div class="candidate-headline"><em>The bookkeeper-in-training who&apos;s cleared most of ACCA.</em></div>
+  </header>
+  <div class="candidate-body">
+    <div class="candidate-section">
+      <div class="section-label">Profile</div>
+      <p class="candidate-summary">3.5 years of multi-client bookkeeping across Pakistan-based accounting firms. Comfortable owning a portfolio of client books end-to-end: bookkeeping, payroll cycles, HST/GST filings, corporate tax prep, and financial statements. ACCA candidate with 4 professional papers remaining.</p>
+    </div>
+    <div class="candidate-section">
+      <div class="section-label">What they bring</div>
+      <ul class="strengths">
+        <li>Multi-client bookkeeping ownership across a portfolio</li>
+        <li>Payroll cycles, HST/GST filings, corporate tax preparation</li>
+        <li>Financial statement preparation and management reporting</li>
+        <li>ACCA in progress: 4 papers left of the professional level</li>
+        <li>Hands-on with QuickBooks, Xero, Zoho, Tally, Dext, Hub Doc</li>
+        <li>Audit exposure from prior firm work</li>
+      </ul>
+    </div>
+    <div class="candidate-diff">
+      <div class="diff-label">The difference</div>
+      <p>The junior-tier hire with the strongest technical trajectory. Priced like a preparer, tracking to become a reviewer once ACCA completes.</p>
+    </div>
+    <div class="candidate-actions">
+      <button class="btn btn-primary cv-toggle" data-target="cv-1" aria-expanded="false">
+        <span class="cv-toggle-label">View CV</span>
+        <svg class="cv-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <a class="btn btn-outline" href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-kLQk82uEMMus/09aa7d69-cbe3-4d64-a19b-344ae24195b5-wZyv5EklrhfZIqQ7Yr8g4aQEoYcPcDVNx0OI42NoQSERZ396gqCFSdzyhNBUIrfchGZTV7tRTEPA86kkxq81FAkbrWVRi2DTsDE/Cv-.pdf" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download resume
+      </a>
+    </div>
+    <div class="cv-panel" id="cv-1" hidden>
+      <div class="cv-header">
+        <div class="cv-tag">Anonymized CV &middot; Sagan</div>
+        <h4>Eysha &middot; Pakistan</h4>
+      </div>
+      <section class="cv-section">
+        <div class="cv-section-label">Executive summary</div>
+        <p>Highly motivated and detail-oriented accounting professional with 3.5 years of experience in accounting and financial accounting. Proven expertise in managing individual accounts, company VAT, and corporate taxes, as well as accounts payable and receivable, reconciliations, and preparation of financial statements. ACCA candidate.</p>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Education</div>
+        <div class="cv-edu"><div class="cv-edu-top"><span class="cv-edu-degree">Intermediate Commerce</span><span class="cv-edu-date">Dec 2018</span></div><div class="cv-edu-school">Pakistan Urdu School</div></div>
+        <div class="cv-edu"><div class="cv-edu-top"><span class="cv-edu-degree">ACCA (Professional Certification)</span><span class="cv-edu-date">In progress — 4 papers left</span></div><div class="cv-edu-school">Association of Chartered Certified Accountants</div></div>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Work experience</div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Client Manager</div><div class="cv-role-dates">May 2025 – Dec 2025</div></div><div class="cv-role-industry">Industry &middot; Obox Accounting (Multi-client bookkeeping)</div><p class="cv-role-desc">Ran bookkeeping and financial-statement prep for a portfolio of clients. Owned payroll cycles, HST/GST filings, and corporate tax prep. Delivered financial analysis to support client decisions.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Accountant</div><div class="cv-role-dates">Oct 2023 – Apr 2025</div></div><div class="cv-role-industry">Industry &middot; EBS (Accounting Services)</div><p class="cv-role-desc">Managed multi-client financial accounts and reporting for management review. Ran compliance checks against accounting standards. Financial analysis for business decisions.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Accountant</div><div class="cv-role-dates">Dec 2022 – Jul 2023</div></div><div class="cv-role-industry">Industry &middot; Aaziz &amp; Co (Audit + Advisory)</div><p class="cv-role-desc">Prepared client financial statements. Conducted audits and delivered improvement recommendations. Built financial models to support decision-making.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Junior Accountant</div><div class="cv-role-dates">Feb 2021 – Dec 2022</div></div><div class="cv-role-industry">Industry &middot; Accountax Support</div><p class="cv-role-desc">Accounting and financial support across multiple clients. Financial records upkeep, compliance, and analysis. ACCA studies running in parallel throughout tenure.</p></div>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Tools &amp; software</div>
+        <div class="cv-tools">
+          <span class="cv-tool">QuickBooks</span><span class="cv-tool">Xero</span><span class="cv-tool">Zoho</span><span class="cv-tool">Tally</span><span class="cv-tool">Dext</span><span class="cv-tool">Hub Doc</span><span class="cv-tool">Payment Evolution</span><span class="cv-tool">Tax-cal</span><span class="cv-tool">Excel</span>
         </div>
-
-        
+      </section>
+    </div>
+  </div>
+</article>
+<article class="candidate" id="candidate-2">
+  <header class="candidate-head">
+    <div class="candidate-badge">
+      <span class="flag">🇲🇽</span>
+      <span class="country">Mexico</span>
+    </div>
+    <div class="candidate-name-row">
+      <h3 class="candidate-name">Luis</h3>
+      <div class="candidate-rate">
+        <span class="rate-num">$2,499</span>
+        <span class="rate-suffix">/mo</span>
+      </div>
+    </div>
+    <div class="candidate-title">Staff Accountant &middot; 4 Years &middot; Big 4 + Enterprise</div>
+    <div class="candidate-headline"><em>The Big 4 analyst who runs US GAAP close in QuickBooks and Bill.com.</em></div>
+  </header>
+  <div class="candidate-body">
+    <div class="candidate-section">
+      <div class="section-label">Profile</div>
+      <p class="candidate-summary">Senior Analyst at EY Parthenon (Corporate Accounting &amp; Transactions). Owns month-end and year-end close under US GAAP for multi-entity multinationals including Honeywell, Bepensa, and Saint-Gobain. Prior enterprise experience running full-cycle ledger and invoice control at Telcel using QuickBooks and Bill.com. B.S. Accounting from Tec de Monterrey with a 4.0 GPA.</p>
+    </div>
+    <div class="candidate-section">
+      <div class="section-label">What they bring</div>
+      <ul class="strengths">
+        <li>US GAAP month-end / year-end close on multi-entity books</li>
+        <li>Big 4 rigor: ASC 350 impairment testing, PPA models, bridge adjustments</li>
+        <li>Enterprise-scale QuickBooks + Bill.com AP/AR workflows</li>
+        <li>Journal entry standardization + internal controls</li>
+        <li>DCF/LBO modeling, S&amp;P Capital IQ, Bloomberg, Power BI</li>
+        <li>English C2 (TOEIC certified) &middot; 4.0 GPA from Tec de Monterrey</li>
+      </ul>
+    </div>
+    <div class="candidate-diff">
+      <div class="diff-label">The difference</div>
+      <p>Strongest technical fit for PE-backed multi-entity work. Has done bridge adjustments, working capital analysis, and multi-entity reporting under US GAAP for real transactions.</p>
+    </div>
+    <div class="candidate-actions">
+      <button class="btn btn-primary cv-toggle" data-target="cv-2" aria-expanded="false">
+        <span class="cv-toggle-label">View CV</span>
+        <svg class="cv-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <a class="btn btn-outline" href="https://prod-fillout-oregon-s3.s3.us-west-2.amazonaws.com/orgid-351357/flowpublicid-ibVpQFJsf5us/ca1f7111-64d4-4890-9b6e-b7b195e66af6-bbQVd7Hd6AbzosCmlhnNhXgZPdAw6vEYT0dqa5sYz39uD8DWXQKqLPKnUzIaVo1HsvPU5Tyt69UraFu7axkaGAWmz4dqJE7DTUi/Luis-F.-RodrAguez-Resume-aqe.pdf" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download resume
+      </a>
+      <a class="btn btn-outline" href="https://candidate-video.com/uploads/4178a248-8320-44ca-8ba9-479ca05c76ce" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Video intro
+      </a>
+    </div>
+    <div class="cv-panel" id="cv-2" hidden>
+      <div class="cv-header">
+        <div class="cv-tag">Anonymized CV &middot; Sagan</div>
+        <h4>Luis &middot; Mexico</h4>
+      </div>
+      <section class="cv-section">
+        <div class="cv-section-label">Executive summary</div>
+        <p>Senior Analyst in Corporate Accounting &amp; Transactions at EY Parthenon. Manages complex financial lifecycles and capital structure analysis, ensuring 100% data integrity for month-end and year-end reporting cycles under US GAAP. Leads impairment testing (ASC 350), PPA models, and bridge adjustments (Net Debt, Working Capital, Cash). Trilingual delivery to C-suite audiences at multinationals including Honeywell, Bepensa, and Saint-Gobain.</p>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Education</div>
+        <div class="cv-edu"><div class="cv-edu-top"><span class="cv-edu-degree">B.S. Accounting &middot; GPA 4.0</span><span class="cv-edu-date">Jun 2022</span></div><div class="cv-edu-school">Tecnológico de Monterrey (Tec de Monterrey)</div></div>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Work experience</div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Senior Analyst — Corporate Accounting &amp; Transactions</div><div class="cv-role-dates">Apr 2024 – Jun 2026</div></div><div class="cv-role-industry">Industry &middot; EY Parthenon &middot; Mexico City</div><p class="cv-role-desc">Owns month-end and year-end reporting cycles under US GAAP for multi-entity multinationals. Runs impairment testing (ASC 350), PPA and Relief from Royalty models, and bridge adjustments (Net Debt, Working Capital, Cash). Delivers investment-grade reporting decks for C-suite planning at Honeywell, Bepensa, and Saint-Gobain.</p></div>
+        <div class="cv-role"><div class="cv-role-head"><div class="cv-role-title">Management Accountant</div><div class="cv-role-dates">Jul 2022 – Apr 2024</div></div><div class="cv-role-industry">Industry &middot; Telcel México (América Móvil) &middot; Monterrey</div><p class="cv-role-desc">Full-cycle ledger maintenance and invoice control in QuickBooks and Bill.com. Standardized journal entry workflows, cutting manual errors and tightening internal controls. Owned regional performance analytics and monthly reporting packages for senior management.</p></div>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-label">Tools &amp; software</div>
+        <div class="cv-tools">
+          <span class="cv-tool">QuickBooks Online/Desktop</span><span class="cv-tool">Bill.com</span><span class="cv-tool">Xero</span><span class="cv-tool">S&amp;P Capital IQ</span><span class="cv-tool">Bloomberg</span><span class="cv-tool">Power BI</span><span class="cv-tool">Advanced Excel</span><span class="cv-tool">DCF/LBO</span><span class="cv-tool">UpSlide</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</article>
       </div>
     </div>
     <div class="candidate-card">
@@ -696,5 +903,20 @@
       document.querySelectorAll('.strength-bars').forEach(function(el) { barObserver.observe(el); });
     })();
   </script>
+
+<script>
+document.querySelectorAll('.cv-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var panel = document.getElementById(btn.getAttribute('data-target'));
+    if (!panel) return;
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    if (expanded) { panel.setAttribute('hidden',''); } else { panel.removeAttribute('hidden'); }
+    var label = btn.querySelector('.cv-toggle-label');
+    if (label) label.textContent = expanded ? 'View CV' : 'Hide CV';
+    if (!expanded) { panel.scrollIntoView({behavior:'smooth', block:'nearest'}); }
+  });
+});
+</script>
 </body>
 </html>
